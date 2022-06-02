@@ -26,8 +26,8 @@ app.use((req, res, next) => {
 });
 
 app.use(router);
-// app.use(errorHandlers.error500);
-// app.use(errorHandlers.error404);
+app.use(errorHandlers.error500);
+app.use(errorHandlers.error404);
 
 app.listen(PORT, () => {
   console.log(`Server is Listening on http://localhost:${PORT}`);
